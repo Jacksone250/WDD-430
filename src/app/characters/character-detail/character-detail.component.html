@@ -1,1 +1,16 @@
-<p>character-detail works!</p>
+<div class="row margin-1em">
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <h3>{{ character?.characterName }}</h3>
+            <!-- <img [src]="character?.imageUrl" [alt]="character?.characterName"> -->
+            <div class="pull-right">
+                <button routerLink="edit" class="btn btn-primary margin-sm">Edit</button>
+                <button (click)="onDelete()" class="btn btn-danger margin-sm">Delete</button>
+            </div>
+        </div>
+        <div class="panel-body">
+            <p><strong>Description:</strong> {{ character?.characterDescription }}</p>
+            <!-- <p><strong>Phone:</strong> {{ character?.phone }}</p> -->
+        </div>
+    </div>
+</div>

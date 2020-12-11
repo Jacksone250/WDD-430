@@ -1,0 +1,22 @@
+[
+    {
+        "id":"1",
+        "characterName":"Valarus Moonridge",
+        "characterDescription":"Tiefling Sorcerer"
+    },
+    {
+        "id":"2",
+        "characterName":"Aria Oakwood",
+        "characterDescription":"Elf Rogue"
+    },
+    {
+        "id":"3",
+        "characterName":"Anbrix",
+        "characterDescription":"Halfling Monk"
+    },
+    {
+        "id":"4",
+        "characterName":"Erman Daggerford",
+        "characterDescription":"Human Fighter"
+    }
+]

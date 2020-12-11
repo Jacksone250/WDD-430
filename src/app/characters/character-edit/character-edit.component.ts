@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+
 import { Character } from '../character.model';
 import { CharacterService } from '../character.service';
 
@@ -44,4 +46,22 @@ export class CharacterEditComponent implements OnInit {
     }); 
   }
 
+  onSubmit(form: FormGroup) {
+    let value = form.value // get values from form’s fields
+    let newCharacter = new Character(
+                                  value.id, 
+                                  value.characterName,
+                                  value.characterDescription);
+    if (this.editMode === true) {
+      this.characterService.updateCharacter(this.originalCharacter, newCharacter);
+    } else {
+      this.characterService.addCharacter(newCharacter);
+    }
+
+    this.onCancel();
+  }
+
+  onCancel() {
+    this.router.navigate(['./characters']);
+  }
 }

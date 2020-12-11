@@ -10,6 +10,9 @@ import { CharactersFilterPipe } from './characters/characters-filter.pipe';
 import { HeaderComponent } from './header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CharacterListComponent } from './characters/character-list/character-list.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { CharacterListComponent } from './characters/character-list/character-li
     CharacterItemComponent,
     CharacterListComponent,
     CharactersFilterPipe,
-    HeaderComponent
+    HeaderComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
